@@ -285,70 +285,78 @@
 // Input collection is in its own function — no repeated code.
 // This is the version where everything came together properly.
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-// a perfume has a name and a price
-typedef struct {
-    char Name[50];
-    double price;
-} Perfume;
+// // a perfume has a name and a price
+// typedef struct {
+//     char Name[50];
+//     double price;
+// } Perfume;
 
-// tell the compiler these functions exist before main uses them
-void Parfym_Name_Price(Perfume *p);
-char The_Choice(Perfume *p);
+// // tell the compiler these functions exist before main uses them
+// void Parfym_Name_Price(Perfume *p);
+// char The_Choice(Perfume *p);
 
-int main() {
-    Perfume Warehouse[10];
-    int count;
-    double total = 0;
-    char choice;
+// int main(){
 
-    // ask how many perfumes we're adding today
-    printf("how many perfumes? ");
-    scanf("%d", &count);
+//     Perfume Warehouse[10];
+//     int count;
+//     double total = 0;
+//     char choice;
 
-    // go through each perfume one by one
-    for (int i = 0; i < count; i++) {
+//     // ask how many perfumes we're adding today
+//     printf("how many perfumes? ");
+//     scanf("%d", &count);
 
-        // collect the name and price for this perfume
-        Parfym_Name_Price(&Warehouse[i]);
-        printf("perfume -> %s || price -> %.2lf\n", Warehouse[i].Name, Warehouse[i].price);
+//     // go through each perfume one by one
+//     for (int i = 0; i < count; i++) {
 
-        // ask if the info is correct
-        choice = The_Choice(&Warehouse[i]);
+//         // collect the name and price for this perfume
+//         Parfym_Name_Price(&Warehouse[i]);
+//         printf("perfume -> %s || price -> %.2lf\n", Warehouse[i].Name, Warehouse[i].price);
 
-        // if they said no, let them fix the mistake and ask again
-        while (choice == 'n' || choice == 'N') {
-            Parfym_Name_Price(&Warehouse[i]);
-            printf("perfume -> %s || price -> %.2lf\n", Warehouse[i].Name, Warehouse[i].price);
-            choice = The_Choice(&Warehouse[i]);
-        }
+//         // ask if the info is correct
+//         choice = The_Choice(&Warehouse[i]);
 
-        // add this perfume's price to the running total
-        total += Warehouse[i].price;
-    }
+//         // if they said no, let them fix the mistake and ask again
+//         while (choice == 'n' || choice == 'N') {
+//             Parfym_Name_Price(&Warehouse[i]);
+//             printf("perfume -> %s || price -> %.2lf\n", Warehouse[i].Name, Warehouse[i].price);
+//             choice = The_Choice(&Warehouse[i]);
+//         }
 
-    printf("total -> %.2lf\n", total);
-    return 0;
-}
+//         // add this perfume's price to the running total
+//         total += Warehouse[i].price;
+//     }
 
-// collects the name and price for one perfume
-// uses fgets so names with spaces work (e.g. "Bleu de Chanel")
-void Parfym_Name_Price(Perfume *p) {
-    getchar();  // clear the newline left by the previous scanf
-    printf("Enter perfume name: ");
-    fgets(p->Name, sizeof(p->Name), stdin);
-    p->Name[strlen(p->Name) - 1] = '\0';  // remove the newline fgets adds at the end
-    printf("Enter price: ");
-    scanf("%lf", &p->price);
-}
+//     printf("total -> %.2lf\n", total);
+//     return 0;
+// }
 
-// shows the current name and price and asks if it is correct
-// returns 'y' or 'n'
-char The_Choice(Perfume *p) {
-    printf("is this correct? %s || %.2lf -> y/n\n", p->Name, p->price);
-    char Answer;
-    scanf(" %c", &Answer);
-    return Answer;
-}
+// // collects the name and price for one perfume
+// // uses fgets so names with spaces work (e.g. "Bleu de Chanel")
+// void Parfym_Name_Price(Perfume *p) {
+//     getchar();  // clear the newline left by the previous scanf
+//     printf("Enter perfume name: ");
+//     fgets(p->Name, sizeof(p->Name), stdin);
+//     p->Name[strlen(p->Name) - 1] = '\0';  // remove the newline fgets adds at the end
+//     printf("Enter price: ");
+//     scanf("%lf", &p->price);
+// }
+
+// // shows the current name and price and asks if it is correct
+// // returns 'y' or 'n'
+// char The_Choice(Perfume *p) {
+//     printf("is this correct? %s || %.2lf -> y/n\n", p->Name, p->price);
+//     char Answer;
+//     scanf(" %c", &Answer);
+//     return Answer;
+// }
+
+
+
+
+
+
+

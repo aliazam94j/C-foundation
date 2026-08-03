@@ -43,6 +43,19 @@ The comments explain what changed and why.
 
 ---
 
+## How I learn
+
+When I study a concept, I do not stop until I can explain it two ways:
+
+- **To a programmer** — using the correct terms, the mechanics, the why behind it
+- **To someone with no technical background** — using plain language and real-world comparisons
+
+This comes directly from my background in social care and as a martial arts coach.
+If I cannot explain what a pointer does to someone who has never written code,
+I do not fully understand it yet.
+
+---
+
 ## Where I am heading
 
 I am looking for a LIA placement in embedded systems or IoT.
