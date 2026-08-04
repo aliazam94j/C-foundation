@@ -51,8 +51,6 @@ When I study a concept, I do not stop until I can explain it two ways:
 - **To someone with no technical background** — using plain language and real-world comparisons
 
 This comes directly from my background in social care and as a martial arts coach.
-If I cannot explain what a pointer does to someone who has never written code,
-I do not fully understand it yet.
 
 ---
 
