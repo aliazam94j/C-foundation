@@ -1,3 +1,7 @@
+// Velocity training exercise — the same program rewritten 7 times from scratch.
+// Each version adds one new concept. The goal was repetition, not a finished product.
+// Version 7 is uncommented so the file compiles. Versions 1-6 are kept below as history.
+
 #include <stdio.h>
 #include <string.h>
 
