@@ -6,7 +6,7 @@ I am a first-year IoT student currently strengthening my C programming foundatio
 before entering my LIA (work placement) in year two.
 
 My background is not traditional. Before studying IoT I spent over 10 years working
-in social care — in schools, SIS institutions, and HVB homes. That work taught me
+in social care  in schools, SIS institutions, and HVB homes. That work taught me
 how to explain complex things simply, work under pressure, and communicate with people
 at very different levels of understanding. I bring that same mindset to programming.
 
@@ -36,8 +36,6 @@ once to a programmer, and once to someone with no technical background at all.
 | `Perfume velocity.c` | The same program rewritten 7 times — structs, pointers, fgets, function prototypes |
 | `Calculator velocity.c` | The same calculator rewritten 6 times — void to double, if/else to switch |
 | `test.c` | General exercises — loops, arrays, strings, pointers, structs, file I/O |
-| `stringvelocity.c` | String exercises — strcmp, strlen, fgets, input validation |
-
 Each file shows the full progression from first attempt to final version.
 The comments explain what changed and why.
 
@@ -51,6 +49,8 @@ When I study a concept, I do not stop until I can explain it two ways:
 - **To someone with no technical background** — using plain language and real-world comparisons
 
 This comes directly from my background in social care and as a martial arts coach.
+If I cannot explain what a pointer does to someone who has never written code,
+I do not fully understand it yet.
 
 ---
 
@@ -60,5 +60,5 @@ I am looking for a LIA placement in embedded systems or IoT.
 I want to work in an environment where I can apply what I have learned hands-on
 while continuing to grow.
 
-My goal is to become an engineer who can both build and explain —
+My goal is to become an engineer who can both build and explain 
 to the team, to clients, and to people who have never written a line of code.
