@@ -807,28 +807,89 @@
 // }
 
 
-// ===== CURRENT ACTIVE PROGRAM =====
 
-// --- 2D string array with fgets input ---
-// User types in energy drink names — stored in a 2D char array.
-// fgets handles spaces in names. strlen strips the newline at the end.
+// #include <stdio.h>
+// #include <ctype.h>
 
-#include <stdio.h>
-#include <string.h>
 
-int main() {
-    char EnergiDrinks[3][25] = {0};
-    int size = sizeof(EnergiDrinks) / sizeof(EnergiDrinks[0]);
 
-    for(int i = 0; i < size; i++){
-        printf("Enter energy drink %d: ", i + 1);
-        fgets(EnergiDrinks[i], sizeof(EnergiDrinks[i]), stdin);
-        EnergiDrinks[i][strlen(EnergiDrinks[i]) - 1] = '\0';
-    }
+// int main(){
+//     char questions[][100] = {"What martial arts is from korea?",
+//                              "Which martial arts does not use strikeing?"};
+//     char option[][100] = {"A.Judo\nB.Wing Chun\nC.Taekwondo\nD.Fencing\n",
+//                           "A.Karate\nB.MMA\nC.Boxing\nD.Grappling"};
 
-    for(int i = 0; i < size; i++){
-        printf("%s ", EnergiDrinks[i]);
-    }
-    printf("\n");
-    return 0;
-}
+//     int questionCount = sizeof(questions) / sizeof(questions[0]);
+//     char guess = '\0';
+//     int score = 0;
+//     char answerkey[] = {'C', 'D'};
+//     printf("---WELCOME TO THE QUIZ GAME---\n");
+//     for (int i = 0; i < questionCount; i++){
+//         printf("\n%s\n", questions[i]);
+//         printf("\n%s\n", option[i]);
+//         printf("\nEnter your choice ");
+//         scanf(" %c", &guess);
+//         guess = toupper(guess);
+//         if (guess == answerkey[i])
+//         {
+//             printf("You are correct!\n");
+//             score++;
+//         }
+//         else
+//         {
+//             printf("you are wrong\n");
+//         }
+// }
+// printf("\nYour Total is %d out of %d\n", score,questionCount);
+// return 0;
+// }
+
+
+
+// #include <stdio.h>
+// #include <stdbool.h>
+
+
+// int main(){
+//     int hours = 12;
+//     int minutes = 30;
+//     char *merdiem = (hours < 12) ? "AM" : "PM";
+//     printf("%02d:%02d %s", hours, minutes, merdiem);
+//     return 0;
+
+// }
+
+// #include<stdio.h>
+
+// typedef enum
+// {
+//     SUCCESS,
+//     FAILURE,
+//     PENDING
+// }Status;
+
+// void connectStatus(Status Class);
+
+// int main(){
+//     Status class = PENDING;
+//     connectStatus(class);
+//     return 0;
+// }
+
+
+
+// void connectStatus(Status class){
+//     switch(class){ 
+//         case SUCCESS:
+//             printf("Connection Success\n");
+//             break;
+//         case FAILURE:
+//             printf("CONNECTION FAILED\n");
+//             break;
+//         case PENDING:
+//             printf("Connection pending!...\n");
+//             break;
+//         }
+//     }
+
+
