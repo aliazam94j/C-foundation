@@ -892,4 +892,136 @@
 //         }
 //     }
 
+// #include <stdio.h>
+//exercises 1
 
+// int main(){
+//     int x = 5;
+
+//     int *p = &x;
+
+//     printf("%d", *p);
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+// // exercsies 2
+
+// int main(){
+
+//     int x = 5;
+//     int *pResult = &x;
+//     *pResult = 99;
+
+//     printf("%d", *pResult);
+//     return 0;
+// }
+
+
+
+// #include <stdio.h>
+
+// void double_it(int *p);
+
+
+// int main(){
+//     int num1 = 0;
+
+//     printf("Enter your nr \n");
+//     scanf("%d", &num1);
+
+//     double_it(&num1);
+
+//     return 0;
+// }
+
+
+
+// void double_it(int *p){
+//     *p = *p * 2;
+//     printf("This is your result = %d", *p);
+// }
+
+
+
+
+// #include <stdio.h>
+
+
+
+
+// int main(){
+
+//     int arr[6] = {10, 20, 30, 40, 50};
+//     int *pArr = arr;
+//     printf("%d\n", *pArr);
+//     for (int i = 0; i < 5; i++)
+//     {
+//         printf("%d ", *pArr);
+//         pArr++;
+//     }
+// }
+
+
+#include <stdio.h>
+#include <string.h>
+
+typedef struct{
+    char name[50];
+    int nr;
+} Contact;
+
+void Add_Contact_name(Contact *p,int *count);
+void Contact_name(Contact *p,int *count);
+void The_result(Contact *p,int *count);
+
+int main(){
+    Contact Book[50];
+    int count = 0;
+    Contact_name(Book,&count);
+    Add_Contact_name(Book,&count);
+    The_result(Book,&count);
+    return 0;
+}
+
+
+
+
+// Adding the names and nr.
+void Contact_name(Contact *p,int *count){
+    printf("how many names do u want to add?\n");
+    scanf("%d", &*count);
+    for (int i = 0; i < *count; i++){
+        printf("NAME: ");
+        getchar();
+        fgets(p[i].name, sizeof(p[i].name), stdin);
+        p[i].name[strlen(p[i].name) - 1] = '\0';
+        printf("NR: ");
+        scanf("%d", &p[i].nr);
+    }
+}
+// extra contacts.
+        void Add_Contact_name(Contact * p,int *count){
+            int extra = 0;
+            printf("how many extra contacts do u want to add?\n");
+            scanf("%d", &extra);
+            int start = *count;
+            *count += extra;
+            for (int i = start; i < *count; i++)
+            {
+                printf("NAME: ");
+                getchar();
+                fgets(p[i].name, sizeof(p[i].name), stdin);
+                p[i].name[strlen(p[i].name) - 1] = '\0';
+                printf("NR: ");
+                scanf("%d", &p[i].nr);
+            }
+        }
+
+// the contact list at the end.
+        void The_result(Contact *p,int *count){
+        for (int i = 0; i < *count; i++){
+            printf("%s = %d\n", p[i].name ,p[i].nr);
+        }
+    }
